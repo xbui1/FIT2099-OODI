@@ -9,7 +9,6 @@ public class Watch {
 
 	public Watch() {
 		// TODO Auto-generated method stub
-
 	}
 	
 	public void display() {

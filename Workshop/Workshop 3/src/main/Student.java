@@ -1,11 +1,8 @@
 package main;
 
-/**
- * Created by Eric Jiang on 11/03/2017.
- */
 public class Student {
     public int StudentId;
-    public String FirstName:
+    public String FirstName;
     public String Surname;
     public String Description;
 
@@ -38,7 +35,7 @@ public class Student {
     }
 
     public void setDescription(String description) {
-        Description = description;
+        Description = StudentId + "" + FirstName + " " + Surname;
     }
 
 }

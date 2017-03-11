@@ -1,16 +1,28 @@
 package main;
+import main.Student;
 
-/**
- * Eric Jiang
- * 27849821
- */
-
+import java.util.ArrayList;
 
 public class Unit {
 
     public String UnitCode;
     public String UnitName;
     public String UnitDescription;
+
+
+
+    public ArrayList<Student> students;
+
+
+    public void enrolStudents(Integer studentID, String firstName, String lastName ){
+        Student student = new Student();
+
+        student.setStudentId(studentID);
+        student.setFirstName(firstName);
+        student.setSurname(lastName);
+
+        students.add(student);
+    }
 
     public String getUnitCode() {
         return UnitCode;
@@ -34,5 +46,13 @@ public class Unit {
 
     public void setUnitDescription() {
         UnitDescription = getUnitCode() + getUnitName();
+    }
+
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
     }
 }

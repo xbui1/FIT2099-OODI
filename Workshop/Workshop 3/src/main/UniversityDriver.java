@@ -21,7 +21,7 @@ public class UniversityDriver {
 
         // create 3 units
         for(int i=1; i < 4; i++){
-            createUnits();
+            createUnit();
         }
 
         displayUnits(units);
@@ -38,7 +38,7 @@ public class UniversityDriver {
 
     }
 
-    public void createUnits() {
+    public void createUnit() {
         Unit unit = new Unit();
 
         Console console = System.console();

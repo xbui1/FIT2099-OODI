@@ -1,5 +1,4 @@
 package main;
-import main.Student;
 
 import java.util.ArrayList;
 
@@ -11,7 +10,7 @@ public class Unit {
 
 
 
-    public ArrayList<Student> students;
+    public ArrayList<Student> Students;
 
 
     public void enrolStudents(Integer studentID, String firstName, String lastName ){
@@ -21,7 +20,7 @@ public class Unit {
         student.setFirstName(firstName);
         student.setSurname(lastName);
 
-        students.add(student);
+        Students.add(student);
     }
 
     public String getUnitCode() {
@@ -41,7 +40,7 @@ public class Unit {
     }
 
     public String getUnitDescription() {
-        return UnitDescription;
+        return UnitDesUcription;
     }
 
     public void setUnitDescription() {
@@ -49,10 +48,10 @@ public class Unit {
     }
 
     public ArrayList<Student> getStudents() {
-        return students;
+        return Students;
     }
 
     public void setStudents(ArrayList<Student> students) {
-        this.students = students;
+        this.Students = students;
     }
 }

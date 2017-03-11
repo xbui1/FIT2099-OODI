@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UniversityDriver {
-    public JavaUniversity javaUniversity;
     public ArrayList<Unit> units = new ArrayList<>();
 
     public void printStatus() {

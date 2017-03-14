@@ -8,10 +8,18 @@ public class Unit {
     public String UnitName;
     public String UnitDescription;
 
+    public ArrayList<Student> students = new ArrayList<>();
+    
+    public void displayStudents(){
+    	if(students.size()>0){
+    		for(int i=0; i < students.size(); i++){
+        		Student student = students.get(i);
 
-
-    public ArrayList<Student> Students;
-
+                String studentDescription = student.getDescription();
+                System.out.println(studentDescription);
+        	}
+    	}
+    }
 
     public void enrolStudents(Integer studentID, String firstName, String lastName ){
         Student student = new Student();
@@ -19,8 +27,7 @@ public class Unit {
         student.setStudentId(studentID);
         student.setFirstName(firstName);
         student.setSurname(lastName);
-
-        Students.add(student);
+        students.add(student);
     }
 
     public String getUnitCode() {
@@ -40,7 +47,7 @@ public class Unit {
     }
 
     public String getUnitDescription() {
-        return UnitDesUcription;
+        return UnitDescription;
     }
 
     public void setUnitDescription() {
@@ -48,10 +55,10 @@ public class Unit {
     }
 
     public ArrayList<Student> getStudents() {
-        return Students;
+        return students;
     }
 
     public void setStudents(ArrayList<Student> students) {
-        this.Students = students;
+        this.students = students;
     }
 }

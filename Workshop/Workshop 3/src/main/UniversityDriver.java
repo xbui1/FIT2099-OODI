@@ -4,10 +4,8 @@
  */
 
 package main;
-import main.JavaUniversity;
 import main.Unit;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,13 +13,10 @@ public class UniversityDriver {
     public ArrayList<Unit> units = new ArrayList<>();
 
     public void printStatus() {
-        Unit[] unitArray = new Unit[3];
+        ArrayList<Unit> unitArray = new ArrayList<>();
         System.out.println("Welcome to Java University");
 
-        // create 3 units
-        for(int i=1; i < 4; i++){
-            createUnit();
-        }
+        createUnit("FIT1045", "Introduction to Saurabh");
 
         displayUnits(units);
 
@@ -37,20 +32,11 @@ public class UniversityDriver {
 
     }
 
-    public void createUnit() {
+    public void createUnit(String unitCode, String unitName) {
         Unit unit = new Unit();
-
-        Console console = System.console();
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a Unit Code:");
-        String unitCode  = scan.next();
-        System.out.println("Enter a Unit Name:");
-        String unitName = scan.next();
-
         unit.setUnitCode(unitCode);
         unit.setUnitName(unitName);
-
-        System.out.println(unit.getUnitCode());
+        unit.enrolStudents(314159265, "John", "Cena");
         units.add(unit);
     }
 
@@ -60,8 +46,9 @@ public class UniversityDriver {
 
             String unitCode = currentUnit.getUnitCode();
             String unitName = currentUnit.getUnitName();
-
+            
             System.out.println("Unit Code " + unitCode + ", " + "Unit Name is " + unitName);
+            currentUnit.displayStudents();
         }
     }
 }

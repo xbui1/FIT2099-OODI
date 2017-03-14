@@ -34,6 +34,12 @@ public class UniversityDriver {
         universityDriver.printStatus();
     }
 
+    /**
+     * createUnit
+     * adds a unit
+     * @param unitCode
+     * @param unitName
+     */
     public void createUnit(String unitCode, String unitName) {
         Unit unit = new Unit();
         unit.setUnitCode(unitCode);

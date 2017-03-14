@@ -20,7 +20,12 @@ public class Unit {
         	}
     	}
     }
-
+    
+    /**
+     * @param studentID
+     * @param firstName
+     * @param lastName
+     */
     public void enrolStudents(Integer studentID, String firstName, String lastName ){
         Student student = new Student();
 

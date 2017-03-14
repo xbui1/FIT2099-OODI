@@ -4,7 +4,6 @@ public class Student {
     public int StudentId;
     public String FirstName;
     public String Surname;
-    public String Description;
 
     public int getStudentId() {
         return StudentId;
@@ -31,11 +30,7 @@ public class Student {
     }
 
     public String getDescription() {
-        return Description;
-    }
-
-    public void setDescription(String description) {
-        Description = StudentId + "" + FirstName + " " + Surname;
+        return StudentId + " - " + FirstName + " " + Surname;
     }
 
 }

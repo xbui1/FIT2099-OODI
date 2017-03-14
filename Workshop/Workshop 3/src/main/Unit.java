@@ -47,11 +47,7 @@ public class Unit {
     }
 
     public String getUnitDescription() {
-        return UnitDescription;
-    }
-
-    public void setUnitDescription() {
-        UnitDescription = getUnitCode() + getUnitName();
+        return UnitCode + " - " + UnitName;
     }
 
     public ArrayList<Student> getStudents() {

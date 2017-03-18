@@ -2,6 +2,7 @@ package main.assessment;
 
 public class Assessment {
 	public int Weight;
+	public int Mark;
 	public String Description;
 	
 	public int getWeight() {
@@ -15,5 +16,11 @@ public class Assessment {
 	}
 	public void setDescription(String description) {
 		Description = description;
+	}
+	public int getMark() {
+		return Mark;
+	}
+	public void setMark(int mark) {
+		Mark = mark;
 	}
 }

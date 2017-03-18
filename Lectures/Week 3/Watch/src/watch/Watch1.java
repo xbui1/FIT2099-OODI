@@ -1,7 +1,7 @@
 package watch;
 import counter.Counter;
 
-public class Watch1 implements Watch {
+public class Watch1 extends Watch {
 		
 	Counter minutes;
 	Counter hours;

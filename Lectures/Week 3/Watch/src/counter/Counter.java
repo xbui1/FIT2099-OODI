@@ -2,18 +2,18 @@ package counter;
 
 public class Counter {
 
-	private int value = 0;
+	public int value = 0;
 	
 	public void reset() {
 		value = 0;
 	}
 	
 	public void decrement() {
-		value--;
+		value -=  1;
 	}
 	
 	public void increment() {
-		value++;
+		value += 1;
 	}
 	
 	public int getValue() {

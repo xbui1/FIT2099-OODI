@@ -14,7 +14,7 @@ public class LinkedCounter extends MaxCounter {
     public void increment(){
         super.increment();
 
-        if(this.getValue() == 60){
+        if(this.getValue() == 0){
             neighbour.increment();
         }
     }

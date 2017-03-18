@@ -6,7 +6,7 @@ public class MaxCounter extends Counter {
 	private int max;
 	
 	public MaxCounter(int maxValue) {
-		max=maxValue;
+		max = maxValue;
 	}
 	
 	@Override

@@ -1,9 +1,15 @@
 package watch;
 
-public interface Watch {
+public abstract class Watch {
 
-	void tick();
+	public abstract void display();
+	
+	public abstract void tick();
 
-	void testWatch(int numTicks);
-
+	public void testWatch(int numTicks){
+        for (int i = 0; i < numTicks; i++) {
+        	display();
+            tick();
+        }
+    };
 }

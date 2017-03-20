@@ -20,7 +20,7 @@ public class Unit {
     public void displayStudents(){
     	if(enrolledStudents.size()>0){
     		for(int i=0; i < enrolledStudents.size(); i++){
-        		String student = enrolledStudents.get(i);
+        		Integer studentID = enrolledStudents.get(i);
         		
         		// student should contain studentID
         		
@@ -28,6 +28,10 @@ public class Unit {
     	}
     }
     
+    /**
+     * Adds the Student ID to  the Unit Enrolment Array
+     * @param student
+     */
     public void addStudent(Student student){
     	enrolledStudents.add(student.getStudentId());
     }

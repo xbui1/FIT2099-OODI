@@ -14,27 +14,40 @@ import main.unit.Unit;
 
 public class UniversityDriver {
     public HashMap<String, Unit> units = new HashMap<>();
-    
+    public ArrayList<String> unitCodeList = new ArrayList<>();
     public HashMap<Integer, Student> students = new HashMap<>();
-    // HashMap is chosen as there is no order to compare the students against
+    // HashMap is chosen as there is no order required to compare the students against
     // other than their StudentIDs
     
     public void printStatus() {
         System.out.println("Welcome to Java University");
-        System.out.println("Java University v0.0.1");
+        System.out.println("Java University v0.4.0");
 
         int numberOfStudents = readInt("Enter number of students to add: ");
         for(int i=0; i < numberOfStudents; i++){
-        	Integer studentID = readInt("Enter Student ID:")
-        	String firstName = readString("Enter Student's Firstname");
-        	String surname = readString("Enter Student's Surname");
+        	
+        	Integer studentID = readInt("Enter Student ID: ");
+        	String firstName = readString("Enter Student's Firstname: ");
+        	String surname = readString("Enter Student's Surname: ");
         	admitStudents(studentID, firstName, surname);
+        	
         }
+        
         int numberOfUnits = readInt("Enter number of units to add: ");
         for(int i=0; i < numberOfUnits; i++){
-        	String unitCode = readString("Enter Unit Code");
-        	String unitName = readString("Enter Unit Name");
+        	String unitCode = readString("Enter Unit Code: ");
+        	String unitName = readString("Enter Unit Name: ");
+        	unitCodeList.add(unitCode);
         	createUnit(unitCode, unitName);
+            int numberOfStudentsUnit = readInt("Enter number of students to enrol: ");
+            for(int k=0; k < numberOfStudentsUnit; k++){
+                int studentID = readInt("Enter Student ID to add: ");
+        		Student student = students.get(studentID);
+        		if (student != null) {
+        			enrolStudent(unitCode, student);
+        		}
+            	
+            }
         }
         displayUnits(units);
 
@@ -55,7 +68,6 @@ public class UniversityDriver {
      */
     public void admitStudents(Integer studentID, String firstName, String lastName ){
         Student student = new Student();
-
         student.setStudentId(studentID);
         student.setFirstName(firstName);
         student.setSurname(lastName);
@@ -72,7 +84,7 @@ public class UniversityDriver {
         Unit unit = new Unit();
         unit.setUnitCode(unitCode);
         unit.setUnitName(unitName);
-        units.add(unit);
+        units.put(unitCode, unit);
     }
     
     /**
@@ -81,9 +93,10 @@ public class UniversityDriver {
      * @param student
      */
     public void enrolStudent(String unitCode, Student student){
-    	if(unitCode){
-    		
-    	}
+		Unit unit = units.get(unitCode);
+		if (unit != null) {
+			unit.addStudent(student);
+		}
     }
     
     public void displayStudents(ArrayList<Student> students) {
@@ -96,14 +109,11 @@ public class UniversityDriver {
         }
     }
     
-    public void displayUnits(ArrayList<Unit> units) {
-        for(int i=0; i < units.size(); i++){
-            Unit currentUnit = units.get(i);
-
-            String unitDescription = currentUnit.getUnitDescription();
-            
-            System.out.println(unitDescription);
-            currentUnit.displayStudents();
+    public void displayUnits(HashMap<String, Unit> units) {
+        for(int i=0; i < unitCodeList.size(); i++){
+            String currentUnitCode = unitCodeList.get(i);
+            Unit unit = units.get(currentUnitCode);
+            System.out.println(unit.getUnitDescription());
         }
     }
     

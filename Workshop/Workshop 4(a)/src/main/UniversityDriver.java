@@ -13,7 +13,8 @@ import java.util.HashMap;
 import main.unit.Unit;
 
 public class UniversityDriver {
-    public ArrayList<Unit> units = new ArrayList<>();
+    public HashMap<String, Unit> units = new HashMap<>();
+    
     public HashMap<Integer, Student> students = new HashMap<>();
     // HashMap is chosen as there is no order to compare the students against
     // other than their StudentIDs
@@ -21,7 +22,14 @@ public class UniversityDriver {
     public void printStatus() {
         System.out.println("Welcome to Java University");
         System.out.println("Java University v0.0.1");
-        
+
+        int numberOfStudents = readInt("Enter number of students to add: ");
+        for(int i=0; i < numberOfStudents; i++){
+        	Integer studentID = readInt("Enter Student ID:")
+        	String firstName = readString("Enter Student's Firstname");
+        	String surname = readString("Enter Student's Surname");
+        	admitStudents(studentID, firstName, surname);
+        }
         int numberOfUnits = readInt("Enter number of units to add: ");
         for(int i=0; i < numberOfUnits; i++){
         	String unitCode = readString("Enter Unit Code");
@@ -39,6 +47,8 @@ public class UniversityDriver {
     }
     
     /**
+     * admitStudents
+     * Adds a Student to the students array
      * @param studentID
      * @param firstName
      * @param lastName
@@ -63,6 +73,27 @@ public class UniversityDriver {
         unit.setUnitCode(unitCode);
         unit.setUnitName(unitName);
         units.add(unit);
+    }
+    
+    /**
+     * 
+     * @param UnitCode
+     * @param student
+     */
+    public void enrolStudent(String unitCode, Student student){
+    	if(unitCode){
+    		
+    	}
+    }
+    
+    public void displayStudents(ArrayList<Student> students) {
+        for(int i=0; i < students.size(); i++){
+            Student currentStudent = students.get(i);
+
+            String unitDescription = currentStudent.getDescription();
+            
+            System.out.println(unitDescription);
+        }
     }
     
     public void displayUnits(ArrayList<Unit> units) {

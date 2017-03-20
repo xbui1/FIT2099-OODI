@@ -12,17 +12,24 @@ public class Unit {
     public String UnitDescription;
     public ArrayList<Assessment> assesssments = new ArrayList<>();
 
-    public ArrayList<Student> students = new ArrayList<>();
+    public ArrayList<Integer> enrolledStudents = new ArrayList<>(); //this is an array of student IDs
     
+    /**
+     * @author Eric Jiang 
+     */
     public void displayStudents(){
-    	if(students.size()>0){
-    		for(int i=0; i < students.size(); i++){
-        		Student student = students.get(i);
-
-                String studentDescription = student.getDescription();
-                System.out.println(studentDescription);
+    	if(enrolledStudents.size()>0){
+    		for(int i=0; i < enrolledStudents.size(); i++){
+        		String student = enrolledStudents.get(i);
+        		
+        		// student should contain studentID
+        		
         	}
     	}
+    }
+    
+    public void addStudent(Student student){
+    	enrolledStudents.add(student.getStudentId());
     }
     
     public String getUnitCode() {
@@ -43,13 +50,5 @@ public class Unit {
 
     public String getUnitDescription() {
         return UnitCode + " - " + UnitName;
-    }
-
-    public ArrayList<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
     }
 }

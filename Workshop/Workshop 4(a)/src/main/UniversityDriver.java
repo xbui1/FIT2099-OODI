@@ -14,8 +14,10 @@ import main.unit.Unit;
 
 public class UniversityDriver {
     public HashMap<String, Unit> units = new HashMap<>();
+    
     public ArrayList<String> unitCodeList = new ArrayList<>();
     public HashMap<Integer, Student> students = new HashMap<>();
+    
     // HashMap is chosen as there is no order required to compare the students against
     // other than their StudentIDs
     
@@ -51,7 +53,7 @@ public class UniversityDriver {
         }
         displayUnits(units);
 
-        System.out.println("Thank you for using Java University");
+        System.out.println("Thank you for using Java University.");
     }
 
     public static void main(String[] args) {
@@ -99,12 +101,13 @@ public class UniversityDriver {
 		}
     }
     
+    /**
+     * @param students
+     */
     public void displayStudents(ArrayList<Student> students) {
         for(int i=0; i < students.size(); i++){
             Student currentStudent = students.get(i);
-
             String unitDescription = currentStudent.getDescription();
-            
             System.out.println(unitDescription);
         }
     }

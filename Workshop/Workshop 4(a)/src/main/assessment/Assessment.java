@@ -1,6 +1,6 @@
 package main.assessment;
 
-public class Assessment {
+public abstract class Assessment {
 	public int Weight;
 	public int Mark;
 	public String Description;

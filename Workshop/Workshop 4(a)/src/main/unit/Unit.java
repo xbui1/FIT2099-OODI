@@ -14,9 +14,6 @@ public class Unit {
 
     public ArrayList<Integer> enrolledStudents = new ArrayList<>(); //this is an array of student IDs
     
-    /**
-     * @author Eric Jiang 
-     */
     public void displayStudents(){
     	if(enrolledStudents.size()>0){
     		for(int i=0; i < enrolledStudents.size(); i++){

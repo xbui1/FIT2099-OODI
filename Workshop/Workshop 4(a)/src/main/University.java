@@ -36,8 +36,20 @@ public class University {
         }
         
         int numberOfUnits = readInt("Enter number of units to add: ");
-       
-        for(int i=0; i < numberOfUnits; i++){
+        addUnits(numberOfUnits);
+        
+        displayUnits(units);
+
+        System.out.println("Thank you for using Java University.");
+    }
+
+
+	/**
+	 * 
+	 * @param numberOfLoops - Number of Units
+	 */
+    public void addUnits(Integer numberOfLoops){
+    	for(int i=0; i < numberOfLoops; i++){
         	String unitCode = readString("Enter Unit Code: ");
         	String unitName = readString("Enter Unit Name: ");
         	unitCodeList.add(unitCode);
@@ -55,13 +67,7 @@ public class University {
             	
             }
         }
-        displayUnits(units);
-
-        System.out.println("Thank you for using Java University.");
     }
-
-
-    
     /**
      * admitStudents
      * Adds a Student to the students array

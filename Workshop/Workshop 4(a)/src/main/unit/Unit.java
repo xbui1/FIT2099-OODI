@@ -19,7 +19,7 @@ public class Unit {
     public AssessmentScheme assessmentScheme;
     
     /**
-     * 
+     * Get a list of students who are currently enrolled in the unit
      * @return ArrayList of Student IDs which are currently enrolled in the unit
      */
     public ArrayList<Integer> getEnrolledStudents(){
@@ -29,7 +29,7 @@ public class Unit {
     
     /**
      * Adds the Student ID to  the Unit Enrolment Array
-     * @param student
+     * @param student - A Student Object
      */
     public void addStudent(Student student){
     	enrolledStudents.add(student.getStudentId());
@@ -55,12 +55,19 @@ public class Unit {
         return UnitCode + " - " + UnitName;
     }
     
+    /**
+     * Sets the Assessment Scheme of the Unit
+     */
     public void setAssessment(){
     	AssessmentScheme assessmentToAdd = new AssessmentScheme();
-    	String assessmentType= readString("Enter type of assessment to add: ");
-       
+    	
     }
     
+    /**
+     * Asks the user for input using prompt and returns it
+     * @param prompt - message to tell student
+     * @return output String
+     */
     private String readString(String prompt){
     	System.out.print(prompt);
     	BufferedReader in = new BufferedReader(new InputStreamReader(System.in));

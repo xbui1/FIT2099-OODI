@@ -10,7 +10,12 @@ public class Assignment extends Assessment {
 	public void setTitle(String title) {
 		Title = title;
 	}
-
+	
+	/**
+	 * the Constructor of the Assignment Class
+	 * @param weight
+	 * @param title
+	 */
 	public void constructor(int weight, String title){
 		Title = title;
 		Weight = weight;

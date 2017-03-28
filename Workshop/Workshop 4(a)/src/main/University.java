@@ -84,7 +84,7 @@ public class University {
     }
     
     /**
-     * createUnit
+     * Creates a Unit
      * adds a unit
      * @param unitCode
      * @param unitName
@@ -97,7 +97,7 @@ public class University {
     }
     
     /**
-     * 
+     * Enrols a Students
      * @param UnitCode
      * @param student
      */
@@ -110,6 +110,7 @@ public class University {
     
     
     /**
+     * Displays Students
      * @param students
      */
     public void displayStudents(ArrayList<Student> students) {

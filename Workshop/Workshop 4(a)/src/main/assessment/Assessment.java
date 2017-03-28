@@ -20,6 +20,7 @@ public abstract class Assessment {
 	public int getMark() {
 		return Mark;
 	}
+	
 	public void setMark(int mark) {
 		Mark = mark;
 	}

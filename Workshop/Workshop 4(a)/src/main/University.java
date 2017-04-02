@@ -93,6 +93,7 @@ public class University {
         Unit unit = new Unit();
         unit.setUnitCode(unitCode);
         unit.setUnitName(unitName);
+        unit.setAssessment();
         units.put(unitCode, unit);
     }
     

@@ -56,11 +56,11 @@ public class Unit {
     }
     
     /**
-     * Sets the Assessment Scheme of the Unit
+     * Sets up the Assessment Scheme of the Unit
      */
     public void setAssessment(){
     	AssessmentScheme assessmentToAdd = new AssessmentScheme();
-    	
+    	assessmentToAdd.assessmentsAdder();
     }
     
     /**

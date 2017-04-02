@@ -42,6 +42,7 @@ public class AssessmentScheme {
 	 */
 	public void assessmentsAdder(){
 		while(totalWeighting < 100){
+			System.out.println(totalWeighting);
 			Integer assessmentType = Tools.readInt("Enter integer for type of assessment to enter (1 - Exam, 2 - Assignment): ");	
 			Integer weighting = Tools.readInt("Enter percentage weighting of this assessment: ");
 			String description = Tools.readString("Enter description of assessment: ");
@@ -51,6 +52,7 @@ public class AssessmentScheme {
 				exam.setDescription(description);
 				exam.setDuration(duration);
 				exam.setWeight(weighting);
+				totalWeighting = totalWeighting + weighting;
 				addAssessment(exam);
 			} else if(assessmentType == 2){
 				Assignment assignment = new Assignment();
@@ -58,6 +60,7 @@ public class AssessmentScheme {
 				assignment.setTitle(title);
 				assignment.setDescription(description);
 				assignment.setWeight(weighting);
+				totalWeighting = totalWeighting + weighting;
 			} 
 		}
 	}

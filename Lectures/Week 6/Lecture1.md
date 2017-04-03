@@ -21,6 +21,8 @@
         - [Connascence of Timing (CoT)](#connascence-of-timing-cot)
             - [Apollo 11 Example](#apollo-11-example)
         - [Connascnce of Values (CoV)](#connascnce-of-values-cov)
+        - [Connascnce of Identity (CoI)](#connascnce-of-identity-coi)
+- [IMPORTANT SUMMARY](#important-summary)
 
 <!-- /TOC -->
 
@@ -191,8 +193,18 @@ Type: **Dynamic**
 #### Apollo 11 Example
 - Requested available memory
 - Other programs
+- Constant Reboot
 
 ### Connascnce of Values (CoV)
 Type: **Dynamic**
 
 Where two values (variables) must be equal (the same) and if changes, it has to be changed as well 
+
+### Connascnce of Identity (CoI)
+Type: **Dynamic**
+
+When two or more variables has to point the object 
+
+
+# IMPORTANT SUMMARY
+AND HIS NAME IS JOHN CENA

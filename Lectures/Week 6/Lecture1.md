@@ -16,6 +16,7 @@
         - [Connascence of Type](#connascence-of-type)
         - [Connascence of Position](#connascence-of-position)
         - [Connascence of Meaning/Convention (CoM/CoC)](#connascence-of-meaningconvention-comcoc)
+        - [Connascence of Algorithm](#connascence-of-algorithm)
 
 <!-- /TOC -->
 
@@ -145,3 +146,12 @@ public void reset(){
 }
 ```
 - Documentation is **important**
+
+### Connascence of Algorithm
+```
+1. (message, key) ->  Encrypter
+2. Encrypted Messages trasmits 
+3. Encrypted Message Must implement reverse of encrypter
+```
+_must document very precisely_
+

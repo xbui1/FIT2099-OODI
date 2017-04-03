@@ -7,8 +7,9 @@
 - [FIT2099 Lecture 1 Week 6](#fit2099-lecture-1-week-6)
 - [Table of Contents](#table-of-contents)
 - [Good Design in Software](#good-design-in-software)
-- [Dependency Control](#dependency-control)
-- [Why Dependencies](#why-dependencies)
+- [Dependencies](#dependencies)
+    - [Dependency Control](#dependency-control)
+    - [Why Dependencies](#why-dependencies)
 - [Quotes](#quotes)
 
 <!-- /TOC -->
@@ -29,7 +30,8 @@ _there is no algorithm for_:
 
 _Over the years, key princpiles have been identified_
 
-# Dependency Control
+# Dependencies
+## Dependency Control
 - Biggest issue in design
 - Controlling the extent of dependencies
 - Controlling the nature of dependencies
@@ -38,7 +40,7 @@ _Will have some depenencies, having fewer dependencies makes it easier to debug,
 
 - form of depencies matter
 
-# Why Dependencies
+## Why Dependencies
 - dependencies are unavoidable
 - if code unit A depends on code unit B
    - Bugs in B may manifest in A

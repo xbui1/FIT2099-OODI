@@ -19,6 +19,8 @@
         - [Connascence of Algorithm](#connascence-of-algorithm)
         - [Connascence of Execution (CoE)](#connascence-of-execution-coe)
         - [Connascence of Timing (CoT)](#connascence-of-timing-cot)
+            - [Apollo 11 Example](#apollo-11-example)
+        - [Connascnce of Values (CoV)](#connascnce-of-values-cov)
 
 <!-- /TOC -->
 
@@ -186,3 +188,11 @@ Type: **Dynamic**
 - Interacting with hardware - especially real-time computing
 - Distributed Computing
 
+#### Apollo 11 Example
+- Requested available memory
+- Other programs
+
+### Connascnce of Values (CoV)
+Type: **Dynamic**
+
+Where two values (variables) must be equal (the same) and if changes, it has to be changed as well 

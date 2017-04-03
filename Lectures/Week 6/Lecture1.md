@@ -17,6 +17,8 @@
         - [Connascence of Position](#connascence-of-position)
         - [Connascence of Meaning/Convention (CoM/CoC)](#connascence-of-meaningconvention-comcoc)
         - [Connascence of Algorithm](#connascence-of-algorithm)
+        - [Connascence of Execution (CoE)](#connascence-of-execution-coe)
+        - [Connascence of Timing (CoT)](#connascence-of-timing-cot)
 
 <!-- /TOC -->
 
@@ -72,6 +74,7 @@ two components are connascent if a change in one would require the other to be m
 | Dynamic | Dynamically Generated | 
 
 ### Connascence of Name
+Type: **Static**
 has no argument(s)
 
 ```
@@ -91,6 +94,8 @@ class Hello {
 ```
 
 ### Connascence of Type
+Type: **Static**
+
 has argument
 
 ```
@@ -110,6 +115,7 @@ class Hello {
 ```
 
 ### Connascence of Position
+Type: **Static**
 - where order of which things go
 
 ```
@@ -130,7 +136,7 @@ public Watch3(Watch3 w){
 It has to remember the position for example `this.minutes = new LinkedCounter (w.minutes, this.hour);` has to remember the position of this.hour
 
 ### Connascence of Meaning/Convention (CoM/CoC)
-
+Type: **Static**
 ```
 public void increment(){
     super.increment();
@@ -148,10 +154,35 @@ public void reset(){
 - Documentation is **important**
 
 ### Connascence of Algorithm
+Type: **Static**
 ```
 1. (message, key) ->  Encrypter
 2. Encrypted Messages trasmits 
 3. Encrypted Message Must implement reverse of encrypter
 ```
 _must document very precisely_
+
+IPoAC - [https://en.wikipedia.org/wiki/IP_over_Avian_Carriers](https://en.wikipedia.org/wiki/IP_over_Avian_Carriers)
+
+### Connascence of Execution (CoE)
+Type: **Dynamic**
+
+Example: 
+```
+public Watch3(){
+    hours = maxCounter(24):
+    minutes = new LinkedCounter(60, hours);
+    seconds = new LinkedCounter(60, minutes);
+}
+```
+
+Must be ran in the right order for example, hours must be run first (variable declaration)
+
+
+### Connascence of Timing (CoT)
+Type: **Dynamic**
+
+- Parllel Computing
+- Interacting with hardware - especially real-time computing
+- Distributed Computing
 

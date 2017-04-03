@@ -8,6 +8,7 @@
 - [Table of Contents](#table-of-contents)
 - [Good Design in Software](#good-design-in-software)
 - [Dependency Control](#dependency-control)
+- [Why Dependencies](#why-dependencies)
 - [Quotes](#quotes)
 
 <!-- /TOC -->
@@ -37,6 +38,16 @@ _Will have some depenencies, having fewer dependencies makes it easier to debug,
 
 - form of depencies matter
 
+# Why Dependencies
+- dependencies are unavoidable
+- if code unit A depends on code unit B
+   - Bugs in B may manifest in A
+   - Changes to B may require changes to A
+
+- Dependencies have to:
+   - only present when necessary
+   - explicit
+   - easy to understand
 
 # Quotes
 ```
@@ -46,5 +57,10 @@ Sad.
 
 ```
 We will build a wall and make Mexico pay.
+    - Donald Trump (2016)
+```
+
+```
+Mine comfy chair.
     - Donald Trump (2016)
 ```

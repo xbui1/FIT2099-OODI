@@ -12,6 +12,7 @@
             - [The Abstract Class](#the-abstract-class)
             - [Hinge Points](#hinge-points)
         - [Packages](#packages)
+            - [Nesting Packages](#nesting-packages)
 
 <!-- /TOC -->
 
@@ -48,3 +49,8 @@
 We want to split things up into packages.
 - We group a bunch of `classes` and bundle it into a subsystem.
 - The boundary around a package is also an encapsulation boundary.
+
+#### Nesting Packages
+- You can't put a package inside another package in Java
+- `java.util.jar` is not a package within `java.util`
+- If you want to use the package, you have explicitly import (e.g. `import java.util`)

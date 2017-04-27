@@ -13,6 +13,7 @@
             - [Hinge Points](#hinge-points)
         - [Packages](#packages)
             - [Nesting Packages](#nesting-packages)
+        - [Abtraction Layers](#abtraction-layers)
 
 <!-- /TOC -->
 
@@ -54,3 +55,8 @@ We want to split things up into packages.
 - You can't put a package inside another package in Java
 - `java.util.jar` is not a package within `java.util`
 - If you want to use the package, you have explicitly import (e.g. `import java.util`)
+
+### Abtraction Layers
+- An **abstraction layer** is the publicly accessible interface to a class, package or subsystem.
+- You can create an abstraction layer by restricting visiblity as much as possible.
+- One problem is to making too much public.

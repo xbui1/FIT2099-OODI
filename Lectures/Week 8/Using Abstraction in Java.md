@@ -20,6 +20,6 @@
 - is the most important mechnaism in most OO Languages (incl. Java)
     - represent single concept
     - expose a public interface that allows response in order to furfill its responsiblity
-    - hide any implemntation details that don't directly fullfil that responsiblity
-    - ensutre that its attribution are in a valid condition rather than relying  on client code to maintain its state
+    - hide any implementation details that don't directly fullfil that responsiblity
+    - ensures that its attribution are in a valid condition rather than relying  on client code to maintain its state
 

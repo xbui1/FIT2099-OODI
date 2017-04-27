@@ -9,6 +9,7 @@
     - [Features of Java](#features-of-java)
         - [Class](#class)
             - [Visibiltiy Modifiers](#visibiltiy-modifiers)
+            - [The Abstract Class](#the-abstract-class)
 
 <!-- /TOC -->
 
@@ -29,3 +30,10 @@
 - in general when in doubt make it `private`
 - only provide `getters` and `setters` if you're sure that external classes need to directly manipulate
 - if you leave the visibility modifier, your class/attribute/method will be visible within the package which is declared.
+
+#### The Abstract Class
+- The `abstract` class cant be instantiated
+    - may lack important components
+    - such as method bodies
+    - inherits the methods and attributes, this means that it can implement the public methods and the attributes specified by the  **base** class.
+

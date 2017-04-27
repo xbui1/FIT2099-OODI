@@ -8,6 +8,7 @@
     - [Using Abstraction at Code Level](#using-abstraction-at-code-level)
     - [Features of Java](#features-of-java)
         - [Class](#class)
+            - [Visibiltiy Modifiers](#visibiltiy-modifiers)
 
 <!-- /TOC -->
 
@@ -23,3 +24,8 @@
     - hide any implementation details that don't directly fullfil that responsiblity
     - ensures that its attribution are in a valid condition rather than relying  on client code to maintain its state
 
+#### Visibiltiy Modifiers
+- These include `public`, `private` and `protected`
+- in general when in doubt make it `private`
+- only provide `getters` and `setters` if you're sure that external classes need to directly manipulate
+- if you leave the visibility modifier, your class/attribute/method will be visible within the package which is declared.

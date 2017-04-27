@@ -10,6 +10,8 @@
         - [Class](#class)
             - [Visibiltiy Modifiers](#visibiltiy-modifiers)
             - [The Abstract Class](#the-abstract-class)
+            - [Hinge Points](#hinge-points)
+        - [Packages](#packages)
 
 <!-- /TOC -->
 
@@ -37,3 +39,12 @@
     - such as method bodies
     - inherits the methods and attributes, this means that it can implement the public methods and the attributes specified by the  **base** class.
 
+#### Hinge Points
+- Applying dependency inversion to a single relationship.
+- We take a class, seperately define it's interface as an abstract entity, seperate the code. We can let the client code interact with the abstract interface. They only interact with each other through the interface.
+![https://upload.wikimedia.org/wikipedia/commons/8/8d/DIPLayersPattern.png](https://upload.wikimedia.org/wikipedia/commons/8/8d/DIPLayersPattern.png)
+
+### Packages
+We want to split things up into packages.
+- We group a bunch of `classes` and bundle it into a subsystem.
+- The boundary around a package is also an encapsulation boundary.

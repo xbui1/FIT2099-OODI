@@ -89,3 +89,12 @@ if(a instance of BenKenobi){
     - Data isn't Structured
 - Switch Statements
 - Data classes
+
+### You do it....no you do it....no YOU do it.
+- Message Chains
+    - `x= a.getThingy.getStuff(b).getAgain()`
+- Middle main
+
+### Overengineering
+- Speculative Generality
+- Lazy Class

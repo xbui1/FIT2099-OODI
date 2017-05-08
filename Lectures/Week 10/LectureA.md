@@ -73,8 +73,17 @@ if(a instance of BenKenobi){
 
 ### Social Smells
 - Divergent Change
+    - keep on making changes to methods (two sets of methods, one set changes together, the other set changes together - low cohesion)
 - Shotgun Surgery
     - make series of changes, inside changes touch multiple classes.
     - things that stay together should stay inside its on class
 - Feature envy 
     - have a method in one class, that makes changes to an object in another class.
+
+
+### I smell a Python Prograammer
+- Primative Obession
+    - Storing everything of `ArrayList` as `Strings`
+- Data Clumps
+    - Groups of Multiple Variables (two strings and a intenger to store StudentID), String String int. 
+- Switch Statemetns

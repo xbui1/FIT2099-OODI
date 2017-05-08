@@ -111,4 +111,12 @@ if(a instance of BenKenobi){
 - `initialiseWorld` in SWWorld
     - is 114 lines long
     - This is a long method
-    - Replace comment with method() call
+    - Replace comment with method() call, extract a method
+
+### Extract Method
+- Create a method, name it after the intention of the method
+- determine visability
+- Copy the extracted code from source method into new target method.
+
+### Refactoring initailiseWorld
+Extract method. And Refactor. And create a new function.

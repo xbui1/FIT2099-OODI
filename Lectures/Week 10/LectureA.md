@@ -62,3 +62,16 @@ if(a instance of BenKenobi){
     - As you do code review
 - Two hats.
     - Don't refactor and add new features at the same time.
+
+## Taxonomy of Code Smells
+
+### Long Smells
+- Duplicated Code
+- Long Methods
+- Large Classes
+- Long Parameter Lists
+
+### Social Smells
+- Divergent Change
+- Shotgun Surgery
+- Feature envy 

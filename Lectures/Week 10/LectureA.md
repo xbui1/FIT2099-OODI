@@ -105,3 +105,10 @@ if(a instance of BenKenobi){
     - make small change that elimate.reduces a smell
     - Test
     - Reoat until passes whiff test
+- When you break things along the way, it is making a small change at a time rather than a big change.
+
+## Example
+- `initialiseWorld` in SWWorld
+    - is 114 lines long
+    - This is a long method
+    - Replace comment with method() call

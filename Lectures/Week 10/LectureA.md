@@ -42,3 +42,15 @@ if(a instance of BenKenobi){
 - Have Interface SWCloneable, branch
 - Change specs for swclone, returns null if attempt to clone actor
 - A companion `isClonable` method that returns a boolean if an actor is clonable or not.
+
+## Implementing the fix:
+- Caveat:we have
+
+## Refactoring:
+- _"is a technique for taking a body of code and altering resturcturing"_ - change how existing code to do this, but making it better.
+- Refactor to improve quality of software
+
+### Why Refactor?
+- Improve Design of code
+- Improve understandability
+- Improve debuggability

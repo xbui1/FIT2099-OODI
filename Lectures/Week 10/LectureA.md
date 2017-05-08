@@ -75,4 +75,6 @@ if(a instance of BenKenobi){
 - Divergent Change
 - Shotgun Surgery
     - make series of changes, inside changes touch multiple classes.
+    - things that stay together should stay inside its on class
 - Feature envy 
+    - have a method in one class, that makes changes to an object in another class.

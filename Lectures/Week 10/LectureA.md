@@ -98,3 +98,10 @@ if(a instance of BenKenobi){
 ### Overengineering
 - Speculative Generality
 - Lazy Class
+
+## Refactoring
+- Fowler presents a standard set of techniques for eliminating code smells
+- Meta technique
+    - make small change that elimate.reduces a smell
+    - Test
+    - Reoat until passes whiff test

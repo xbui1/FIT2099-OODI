@@ -54,3 +54,11 @@ if(a instance of BenKenobi){
 - Improve Design of code
 - Improve understandability
 - Improve debuggability
+
+### When to Refactor?
+- Fowler
+    - When adding new features
+    - When you need to fix a bug
+    - As you do code review
+- Two hats.
+    - Don't refactor and add new features at the same time.

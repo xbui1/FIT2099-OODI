@@ -74,4 +74,5 @@ if(a instance of BenKenobi){
 ### Social Smells
 - Divergent Change
 - Shotgun Surgery
+    - make series of changes, inside changes touch multiple classes.
 - Feature envy 

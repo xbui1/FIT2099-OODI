@@ -86,4 +86,6 @@ if(a instance of BenKenobi){
     - Storing everything of `ArrayList` as `Strings`
 - Data Clumps
     - Groups of Multiple Variables (two strings and a intenger to store StudentID), String String int. 
-- Switch Statemetns
+    - Data isn't Structured
+- Switch Statements
+- Data classes

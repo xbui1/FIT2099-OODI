@@ -9,13 +9,14 @@
     - [1.4. Architecture and Design](#14-architecture-and-design)
     - [1.5. Design Decisions](#15-design-decisions)
     - [1.6. Quality Attrivutes](#16-quality-attrivutes)
-    - [1.7. Quality Attribute Spec](#17-quality-attribute-spec)
-    - [1.8. Performance](#18-performance)
-    - [1.9. Scalability](#19-scalability)
-    - [1.10. Modifiability](#110-modifiability)
-    - [1.11. Design Tradeoffs](#111-design-tradeoffs)
-    - [1.12. Arcchitectural Patterns](#112-arcchitectural-patterns)
-        - [Architectural Styles](#architectural-styles)
+        - [1.6.1. Quality Attribute Spec](#161-quality-attribute-spec)
+        - [1.6.2. Performance](#162-performance)
+        - [1.6.3. Scalability](#163-scalability)
+        - [1.6.4. Modifiability](#164-modifiability)
+        - [1.6.5. Design Tradeoffs](#165-design-tradeoffs)
+    - [1.7. Arcchitectural Patterns](#17-arcchitectural-patterns)
+        - [1.7.1. Architectural Styles](#171-architectural-styles)
+        - [1.7.2. Client Server Pattern](#172-client-server-pattern)
 
 <!-- /TOC -->
 
@@ -56,16 +57,16 @@
 - ...
 - Part of NFRs
 
-## 1.7. Quality Attribute Spec
+### 1.6.1. Quality Attribute Spec
 - Architecture are often told:
 - Far too imprecise
 
 
-## 1.8. Performance 
+### 1.6.2. Performance 
 - Measure latency 
 - Important metric
 
-## 1.9. Scalability
+### 1.6.3. Scalability
 - Request Load
    - Response Time Changes
    - 100 tps application
@@ -75,7 +76,7 @@
 - Data Size
 - Deployments
 
-## 1.10. Modifiability
+### 1.6.4. Modifiability
 - Modifications to a system during its lifetime
 - Modifiable systems are easier to change/resolve
 - Modifiability should be assessed
@@ -86,7 +87,7 @@
           - Minimising depdencies
     - There is a tradeoff
 
-## 1.11. Design Tradeoffs
+### 1.6.5. Design Tradeoffs
 - QAs interact and affect each other
 - Architects must create solutions that makes sensible design comprimises
   - not possible to fully satisfy all competing requirements
@@ -95,10 +96,11 @@
 
 
 
-## 1.12. Arcchitectural Patterns
-- is a reusable solution to a commonly occuring problem in a software archteccture
+## 1.7. Arcchitectural Patterns
+- is a reusable solution to a commonly occuring p
+roblem in a software archteccture
 
-### Architectural Styles
+### 1.7.1. Architectural Styles
 - Patterns catalogue succesfully used structures that faciltate kinds of component communication
   - client-server
   - N-tier
@@ -106,3 +108,9 @@
   - Pipeline
 - Patterns have well **known characterisitcs**
 - Styles can have different patterns
+
+### 1.7.2. Client Server Pattern
+- Server
+   - which contains a single machine that provides services to multiple clients
+- Client
+  - software apps that provide UI (front-end)

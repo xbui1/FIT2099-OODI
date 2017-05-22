@@ -17,9 +17,11 @@
     - [1.7. Arcchitectural Patterns](#17-arcchitectural-patterns)
         - [1.7.1. Architectural Styles](#171-architectural-styles)
         - [1.7.2. Client Server Pattern](#172-client-server-pattern)
-        - [1.7.3. What does an Architect do?](#173-what-does-an-architect-do)
-        - [1.7.4. Communication among stakeholders](#174-communication-among-stakeholders)
-        - [1.7.5. Design Decisions](#175-design-decisions)
+    - [1.8. Architecture Design](#18-architecture-design)
+        - [1.8.1. What does an Architect do?](#181-what-does-an-architect-do)
+        - [1.8.2. Communication among stakeholders](#182-communication-among-stakeholders)
+        - [1.8.3. Design Decisions](#183-design-decisions)
+    - [1.9. Division of Labour](#19-division-of-labour)
 
 <!-- /TOC -->
 
@@ -118,7 +120,8 @@ roblem in a software archteccture
 - Client
   - software apps that provide UI (front-end)
 
-### 1.7.3. What does an Architect do?
+## 1.8. Architecture Design
+### 1.8.1. What does an Architect do?
 - Many responsiblities
    - Communication among stakeholders
    - Design decisions
@@ -126,14 +129,18 @@ roblem in a software archteccture
    - Risk management
 
 
-### 1.7.4. Communication among stakeholders
+### 1.8.2. Communication among stakeholders
 - Different system characteristics are important to different stakeholders
 - A user: reliable and available
 - A Customer: built on time and budget
 - A Project Manager: allow for development work to be distributed efficiently
 
-### 1.7.5. Design Decisions
+### 1.8.3. Design Decisions
 - Easy design decisions 
   - enormous impact on rest of software
   - earlier a mistake is made in a project, the more expensive it is to fix.
 - Software engineering lore: earlier a mistake is made in a project, the more expensive is it to fix.
+
+## 1.9. Division of Labour
+- Software architecture dictates organisational structure
+- Standard way to Divide Labour in a large project is make different teams responsible for seperate parts of the system. 

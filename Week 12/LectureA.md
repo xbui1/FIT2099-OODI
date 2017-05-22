@@ -63,6 +63,8 @@
 
 ## Scalability
 - Request Load
+   - Response Time Changes
+   - 100 tps application
 - Connections
 - Data Size
 - Deployments

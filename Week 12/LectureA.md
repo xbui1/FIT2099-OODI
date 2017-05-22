@@ -81,4 +81,4 @@
        - Metrics are hard to quantify
        - Assessed changes impacts on components
           - Minimising depdencies
-          
+    - There is a tradeoff

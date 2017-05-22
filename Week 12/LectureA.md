@@ -18,8 +18,8 @@
         - [1.7.1. Architectural Styles](#171-architectural-styles)
         - [1.7.2. Client Server Pattern](#172-client-server-pattern)
         - [1.7.3. What does an Architect do?](#173-what-does-an-architect-do)
-        - [Communication among stakeholders](#communication-among-stakeholders)
-        - [Design Decisions](#design-decisions)
+        - [1.7.4. Communication among stakeholders](#174-communication-among-stakeholders)
+        - [1.7.5. Design Decisions](#175-design-decisions)
 
 <!-- /TOC -->
 
@@ -126,15 +126,14 @@ roblem in a software archteccture
    - Risk management
 
 
-### Communication among stakeholders
+### 1.7.4. Communication among stakeholders
 - Different system characteristics are important to different stakeholders
 - A user: reliable and available
 - A Customer: built on time and budget
 - A Project Manager: allow for development work to be distributed efficiently
 
-### Design Decisions
+### 1.7.5. Design Decisions
 - Easy design decisions 
   - enormous impact on rest of software
   - earlier a mistake is made in a project, the more expensive it is to fix.
-
-
+- Software engineering lore: earlier a mistake is made in a project, the more expensive is it to fix.

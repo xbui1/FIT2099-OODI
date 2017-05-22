@@ -10,9 +10,12 @@
     - [1.5. Design Decisions](#15-design-decisions)
     - [1.6. Quality Attrivutes](#16-quality-attrivutes)
     - [1.7. Quality Attribute Spec](#17-quality-attribute-spec)
-    - [Performance](#performance)
-    - [Scalability](#scalability)
-    - [Modifiability](#modifiability)
+    - [1.8. Performance](#18-performance)
+    - [1.9. Scalability](#19-scalability)
+    - [1.10. Modifiability](#110-modifiability)
+    - [1.11. Design Tradeoffs](#111-design-tradeoffs)
+    - [1.12. Arcchitectural Patterns](#112-arcchitectural-patterns)
+        - [Architectural Styles](#architectural-styles)
 
 <!-- /TOC -->
 
@@ -58,11 +61,11 @@
 - Far too imprecise
 
 
-## Performance 
+## 1.8. Performance 
 - Measure latency 
 - Important metric
 
-## Scalability
+## 1.9. Scalability
 - Request Load
    - Response Time Changes
    - 100 tps application
@@ -72,7 +75,7 @@
 - Data Size
 - Deployments
 
-## Modifiability
+## 1.10. Modifiability
 - Modifications to a system during its lifetime
 - Modifiable systems are easier to change/resolve
 - Modifiability should be assessed
@@ -82,3 +85,24 @@
        - Assessed changes impacts on components
           - Minimising depdencies
     - There is a tradeoff
+
+## 1.11. Design Tradeoffs
+- QAs interact and affect each other
+- Architects must create solutions that makes sensible design comprimises
+  - not possible to fully satisfy all competing requirements
+  - **Must satisfy all stakeholder needs**
+     - This is very difficult
+
+
+
+## 1.12. Arcchitectural Patterns
+- is a reusable solution to a commonly occuring problem in a software archteccture
+
+### Architectural Styles
+- Patterns catalogue succesfully used structures that faciltate kinds of component communication
+  - client-server
+  - N-tier
+  - Message broker
+  - Pipeline
+- Patterns have well **known characterisitcs**
+- Styles can have different patterns

@@ -12,6 +12,7 @@
     - [1.7. Quality Attribute Spec](#17-quality-attribute-spec)
     - [Performance](#performance)
     - [Scalability](#scalability)
+    - [Modifiability](#modifiability)
 
 <!-- /TOC -->
 
@@ -65,6 +66,19 @@
 - Request Load
    - Response Time Changes
    - 100 tps application
+   - Achieve Linear Increase in performance
+   - Concurrency, Memory
 - Connections
 - Data Size
 - Deployments
+
+## Modifiability
+- Modifications to a system during its lifetime
+- Modifiable systems are easier to change/resolve
+- Modifiability should be assessed
+    - **No need to facilitate changes if it is not desired**
+    - Impact
+       - Metrics are hard to quantify
+       - Assessed changes impacts on components
+          - Minimising depdencies
+          

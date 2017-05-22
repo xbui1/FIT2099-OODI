@@ -17,7 +17,9 @@
     - [1.7. Arcchitectural Patterns](#17-arcchitectural-patterns)
         - [1.7.1. Architectural Styles](#171-architectural-styles)
         - [1.7.2. Client Server Pattern](#172-client-server-pattern)
-        - [What does an Architect do?](#what-does-an-architect-do)
+        - [1.7.3. What does an Architect do?](#173-what-does-an-architect-do)
+        - [Communication among stakeholders](#communication-among-stakeholders)
+        - [Design Decisions](#design-decisions)
 
 <!-- /TOC -->
 
@@ -116,9 +118,23 @@ roblem in a software archteccture
 - Client
   - software apps that provide UI (front-end)
 
-### What does an Architect do?
+### 1.7.3. What does an Architect do?
 - Many responsiblities
    - Communication among stakeholders
    - Design decisions
    - Helps with division of labour
    - Risk management
+
+
+### Communication among stakeholders
+- Different system characteristics are important to different stakeholders
+- A user: reliable and available
+- A Customer: built on time and budget
+- A Project Manager: allow for development work to be distributed efficiently
+
+### Design Decisions
+- Easy design decisions 
+  - enormous impact on rest of software
+  - earlier a mistake is made in a project, the more expensive it is to fix.
+
+

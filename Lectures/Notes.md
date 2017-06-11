@@ -28,24 +28,27 @@ FIT2099 Notes
     - [3.1. What is Encapsulation?](#31-what-is-encapsulation)
     - [3.2. Mechanisms](#32-mechanisms)
     - [3.3. Using Encapsulation in Java](#33-using-encapsulation-in-java)
-    - [Defensively Copy](#defensively-copy)
-- [4. Using Abstraction in Java (Week 8 Lecture 2)](#4-using-abstraction-in-java-week-8-lecture-2)
-            - [4.0.0.11. Using Abstraction at Code Level](#40011-using-abstraction-at-code-level)
-            - [4.0.0.12. Features of Java](#40012-features-of-java)
-                    - [4.0.0.12.0.1. Class](#4001201-class)
-                    - [4.0.0.12.0.2. ## Visibiltiy Modifiers](#4001202--visibiltiy-modifiers)
-                    - [4.0.0.12.0.3. ## The Abstract Class](#4001203--the-abstract-class)
-                    - [4.0.0.12.0.4. ## Hinge Points](#4001204--hinge-points)
-                    - [4.0.0.12.0.5. Packages](#4001205-packages)
-                    - [4.0.0.12.0.6. ## Nesting Packages](#4001206--nesting-packages)
-                    - [4.0.0.12.0.7. Abtraction Layers](#4001207-abtraction-layers)
-- [5. FIT2099 Week 9 Lecture A](#5-fit2099-week-9-lecture-a)
-            - [5.0.0.13. Client Supplier Relationship](#50013-client-supplier-relationship)
-            - [5.0.0.14. Software Spec: The Problem](#50014-software-spec-the-problem)
-            - [5.0.0.15. Design by Contract](#50015-design-by-contract)
-                    - [5.0.0.15.0.8. Software Contract](#5001508-software-contract)
-            - [5.0.0.16. Specification of a Class](#50016-specification-of-a-class)
-            - [5.0.0.17. Specs](#50017-specs)
+    - [3.4. Defensively Copy](#34-defensively-copy)
+- [4. Designing Software](#4-designing-software)
+    - [4.1. Starting](#41-starting)
+    - [4.2. Scenario based design](#42-scenario-based-design)
+- [5. Using Abstraction in Java (Week 8 Lecture 2)](#5-using-abstraction-in-java-week-8-lecture-2)
+    - [5.1. Using Abstraction at Code Level](#51-using-abstraction-at-code-level)
+    - [5.2. Features of Java](#52-features-of-java)
+        - [5.2.1. Class](#521-class)
+        - [5.2.2. Visibiltiy Modifiers](#522-visibiltiy-modifiers)
+        - [5.2.3. The Abstract Class](#523-the-abstract-class)
+        - [5.2.4. Hinge Points](#524-hinge-points)
+        - [5.2.5. Packages](#525-packages)
+        - [5.2.6. Nesting Packages](#526-nesting-packages)
+        - [5.2.7. Abtraction Layers](#527-abtraction-layers)
+- [6. FIT2099 Week 9 Lecture A](#6-fit2099-week-9-lecture-a)
+            - [6.0.7.1. Client Supplier Relationship](#6071-client-supplier-relationship)
+            - [6.0.7.2. Software Spec: The Problem](#6072-software-spec-the-problem)
+            - [6.0.7.3. Design by Contract](#6073-design-by-contract)
+                    - [6.0.7.3.0.1. Software Contract](#607301-software-contract)
+            - [6.0.7.4. Specification of a Class](#6074-specification-of-a-class)
+            - [6.0.7.5. Specs](#6075-specs)
 
 <!-- /TOC -->
 # 2. Good Design in Software 
@@ -269,61 +272,85 @@ When two or more variables has to point the object
 - Keep the class package-private if not needed!
 - Use `protected` sparingly, consider using methods rather than attributes
 
-## Defensively Copy
+## 3.4. Defensively Copy
 - When getters return a mutable object.
 - One with public attributes or mutator methods other than constructor.
 - Generally, make a copy and return that.
 
 - Otherwise, lose benefit of encapsulation and control of connascence…
 
+# 4. Designing Software
+## 4.1. Starting
+- Start at the Top:
+    - Start with high-level problem.
+    - Divide into subproblems.
+    - Design to solve those.
+    - Put it together…
+- Start at the bottom:
+    - Start with a small problem that you can solve.
+    - Design a solution to that.
+    - Do a few more…
+    - Start putting them together 
+    - Voila…a solution! 
 
-# 4. Using Abstraction in Java (Week 8 Lecture 2)
 
-#### 4.0.0.11. Using Abstraction at Code Level
+## 4.2. Scenario based design
+- Have some scenario(s) that the thing being designed needs to support.
+    - Storyboard, activity diagram, plain text…
+    - This may come out of requirements or analysis (depending on whether thing is “the system” or some small part of it)
+- Work through your scenario(s).
+    - Trace through your design as it stands.
+- Modify/rework design to support scenario effectively.
+    - Keep quality properties in mind…
+- Repeat with additional scenarios.
+
+# 5. Using Abstraction in Java (Week 8 Lecture 2)
+
+## 5.1. Using Abstraction at Code Level
 - Abtraction is a **design principle** rather than a _programming technique_
 - You do not have to write generic classes in this unit
 
-#### 4.0.0.12. Features of Java
-###### 4.0.0.12.0.1. Class
+## 5.2. Features of Java
+### 5.2.1. Class
 - is the most important mechnaism in most OO Languages (incl. Java)
     - represent single concept
     - expose a public interface that allows response in order to furfill its responsiblity
     - hide any implementation details that don't directly fullfil that responsiblity
     - ensures that its attribution are in a valid condition rather than relying  on client code to maintain its state
 
-###### 4.0.0.12.0.2. ## Visibiltiy Modifiers
+### 5.2.2. Visibiltiy Modifiers
 - These include `public`, `private` and `protected`
 - in general when in doubt make it `private`
 - only provide `getters` and `setters` if you're sure that external classes need to directly manipulate
 - if you leave the visibility modifier, your class/attribute/method will be visible within the package which is declared.
 
-###### 4.0.0.12.0.3. ## The Abstract Class
+### 5.2.3. The Abstract Class
 - The `abstract` class cant be instantiated
     - may lack important components
     - such as method bodies
     - inherits the methods and attributes, this means that it can implement the public methods and the attributes specified by the  **base** class.
 
-###### 4.0.0.12.0.4. ## Hinge Points
+### 5.2.4. Hinge Points
 - Applying dependency inversion to a single relationship.
 - We take a class, seperately define it's interface as an abstract entity, seperate the code. We can let the client code interact with the abstract interface. They only interact with each other through the interface.
 ![https://upload.wikimedia.org/wikipedia/commons/8/8d/DIPLayersPattern.png](https://upload.wikimedia.org/wikipedia/commons/8/8d/DIPLayersPattern.png)
 
-###### 4.0.0.12.0.5. Packages
+### 5.2.5. Packages
 We want to split things up into packages.
 - We group a bunch of `classes` and bundle it into a subsystem.
 - The boundary around a package is also an encapsulation boundary.
 
-###### 4.0.0.12.0.6. ## Nesting Packages
+### 5.2.6. Nesting Packages
 - You can't put a package inside another package in Java
 - `java.util.jar` is not a package within `java.util`
 - If you want to use the package, you have explicitly import (e.g. `import java.util`)
 
-###### 4.0.0.12.0.7. Abtraction Layers
+### 5.2.7. Abtraction Layers
 - An **abstraction layer** is the publicly accessible interface to a class, package or subsystem.
 - You can create an abstraction layer by restricting visiblity as much as possible.
 - One problem is to making too much public.
 
-# 5. FIT2099 Week 9 Lecture A
+# 6. FIT2099 Week 9 Lecture A
 
 Student data type
 ```
@@ -336,7 +363,7 @@ Address
 
 - Find specification of the class.
 
-#### 5.0.0.13. Client Supplier Relationship
+#### 6.0.7.1. Client Supplier Relationship
 - We can draw the UML
 
 Client -> Supplier
@@ -346,16 +373,16 @@ Client -> Supplier
    - `Watch1` is a client of Counter, and asks it to perform services such as `increment`, `reset()`
    - Inheritments making use of service to.
    
-#### 5.0.0.14. Software Spec: The Problem
+#### 6.0.7.2. Software Spec: The Problem
 - Hardware components
 - Well-edfined public interafcaes with a hidden implementation
 - Have regorous umabgiousous _specification_ of behaviour
 
-#### 5.0.0.15. Design by Contract
+#### 6.0.7.3. Design by Contract
 - _class_ desginer establishes a _software contract_ between him/herselfs and the user(s) of the class he/she designs
 - make this impersonal. Contract betweent he class that is the supplier and the clients of the class
 
-###### 5.0.0.15.0.8. Software Contract
+###### 6.0.7.3.0.1. Software Contract
 - Documentation of the class of the technical user
 - the possiblity of enforcing the contract by using exceptions and assertions
 
@@ -374,7 +401,7 @@ public class Documentation{
    e.g. `assert studentID to be interger and between 00000001 to 99999999`
    - What the class will guarantee to be if is used correctly
 
-#### 5.0.0.16. Specification of a Class
+#### 6.0.7.4. Specification of a Class
 - A specification
     - is ideally part of the implementation
         - In some languages such as _Eiffel_ that is built ibn others that i can done by hand (via the use of assertions and exceptions)
@@ -393,7 +420,7 @@ public class Documentation{
     - not have to look at implemenation details
 - Specs forms the public interface of the class
 
-#### 5.0.0.17. Specs
+#### 6.0.7.5. Specs
 - Preconditions ('requires')
     - things that need to be true for method to run
     

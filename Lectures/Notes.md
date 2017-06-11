@@ -23,24 +23,29 @@ FIT2099 Notes
             - [2.2.2.9. Connascnce of Values (CoV)](#2229-connascnce-of-values-cov)
             - [2.2.2.10. Connascnce of Identity (CoI)](#22210-connascnce-of-identity-coi)
     - [2.3. Contrascence](#23-contrascence)
-    - [Minimising Connascence](#minimising-connascence)
-- [3. Using Abstraction in Java (Week 8 Lecture 2)](#3-using-abstraction-in-java-week-8-lecture-2)
-            - [3.0.0.11. Using Abstraction at Code Level](#30011-using-abstraction-at-code-level)
-            - [3.0.0.12. Features of Java](#30012-features-of-java)
-                    - [3.0.0.12.0.1. Class](#3001201-class)
-                    - [3.0.0.12.0.2. ## Visibiltiy Modifiers](#3001202--visibiltiy-modifiers)
-                    - [3.0.0.12.0.3. ## The Abstract Class](#3001203--the-abstract-class)
-                    - [3.0.0.12.0.4. ## Hinge Points](#3001204--hinge-points)
-                    - [3.0.0.12.0.5. Packages](#3001205-packages)
-                    - [3.0.0.12.0.6. ## Nesting Packages](#3001206--nesting-packages)
-                    - [3.0.0.12.0.7. Abtraction Layers](#3001207-abtraction-layers)
-- [4. FIT2099 Week 9 Lecture A](#4-fit2099-week-9-lecture-a)
-            - [4.0.0.13. Client Supplier Relationship](#40013-client-supplier-relationship)
-            - [4.0.0.14. Software Spec: The Problem](#40014-software-spec-the-problem)
-            - [4.0.0.15. Design by Contract](#40015-design-by-contract)
-                    - [4.0.0.15.0.8. Software Contract](#4001508-software-contract)
-            - [4.0.0.16. Specification of a Class](#40016-specification-of-a-class)
-            - [4.0.0.17. Specs](#40017-specs)
+    - [2.4. Minimising Connascence](#24-minimising-connascence)
+- [3. Encpsulation](#3-encpsulation)
+    - [3.1. What is Encapsulation?](#31-what-is-encapsulation)
+    - [3.2. Mechanisms](#32-mechanisms)
+    - [3.3. Using Encapsulation in Java](#33-using-encapsulation-in-java)
+    - [Defensively Copy](#defensively-copy)
+- [4. Using Abstraction in Java (Week 8 Lecture 2)](#4-using-abstraction-in-java-week-8-lecture-2)
+            - [4.0.0.11. Using Abstraction at Code Level](#40011-using-abstraction-at-code-level)
+            - [4.0.0.12. Features of Java](#40012-features-of-java)
+                    - [4.0.0.12.0.1. Class](#4001201-class)
+                    - [4.0.0.12.0.2. ## Visibiltiy Modifiers](#4001202--visibiltiy-modifiers)
+                    - [4.0.0.12.0.3. ## The Abstract Class](#4001203--the-abstract-class)
+                    - [4.0.0.12.0.4. ## Hinge Points](#4001204--hinge-points)
+                    - [4.0.0.12.0.5. Packages](#4001205-packages)
+                    - [4.0.0.12.0.6. ## Nesting Packages](#4001206--nesting-packages)
+                    - [4.0.0.12.0.7. Abtraction Layers](#4001207-abtraction-layers)
+- [5. FIT2099 Week 9 Lecture A](#5-fit2099-week-9-lecture-a)
+            - [5.0.0.13. Client Supplier Relationship](#50013-client-supplier-relationship)
+            - [5.0.0.14. Software Spec: The Problem](#50014-software-spec-the-problem)
+            - [5.0.0.15. Design by Contract](#50015-design-by-contract)
+                    - [5.0.0.15.0.8. Software Contract](#5001508-software-contract)
+            - [5.0.0.16. Specification of a Class](#50016-specification-of-a-class)
+            - [5.0.0.17. Specs](#50017-specs)
 
 <!-- /TOC -->
 # 2. Good Design in Software 
@@ -237,60 +242,88 @@ When two or more variables has to point the object
 - This is a form of connascence
 - “Aliasing bugs” – an example fault type where contranescence has not been maintained.
 
-## Minimising Connascence
+## 2.4. Minimising Connascence
 1. Minimise overall amount of connascence by breaking system into encapsulated elements.
 2. Minimise remaining connascence that crosses encapsulation boundaries (guideline 3 will help with this)
 3. Maximise connascence within ecapsulation boundaries
 
+# 3. Encpsulation
+
+## 3.1. What is Encapsulation?
+- a software development technique that consists of isolating a system function or a set of data and operations on those data within a module and providing precise specifications for the module
+- the concept that access to the names, meanings, and values of the responsibilities of a class is entirely separated from access to their realization. 
+ - the idea that a module has an outside that is distinct from its inside, that it has an external interface and an internal implementation 
+
+## 3.2. Mechanisms
+- Java was made to encapsulate.
+- Basic unit of Java programs is the class.
+- Can restrict access to anything in the class to:
+    - Within the class only (`private`)
+    - Within the package only (no access modifier - default)
+    - Only to subclasses and within the package (`protected`)
+    - No restrictions (`public`)
+
+## 3.3. Using Encapsulation in Java
+- Avoid public attributes
+- Only make methods public where necessary.
+- Keep the class package-private if not needed!
+- Use `protected` sparingly, consider using methods rather than attributes
+
+## Defensively Copy
+- When getters return a mutable object.
+- One with public attributes or mutator methods other than constructor.
+- Generally, make a copy and return that.
+
+- Otherwise, lose benefit of encapsulation and control of connascence…
 
 
-# 3. Using Abstraction in Java (Week 8 Lecture 2)
+# 4. Using Abstraction in Java (Week 8 Lecture 2)
 
-#### 3.0.0.11. Using Abstraction at Code Level
+#### 4.0.0.11. Using Abstraction at Code Level
 - Abtraction is a **design principle** rather than a _programming technique_
 - You do not have to write generic classes in this unit
 
-#### 3.0.0.12. Features of Java
-###### 3.0.0.12.0.1. Class
+#### 4.0.0.12. Features of Java
+###### 4.0.0.12.0.1. Class
 - is the most important mechnaism in most OO Languages (incl. Java)
     - represent single concept
     - expose a public interface that allows response in order to furfill its responsiblity
     - hide any implementation details that don't directly fullfil that responsiblity
     - ensures that its attribution are in a valid condition rather than relying  on client code to maintain its state
 
-###### 3.0.0.12.0.2. ## Visibiltiy Modifiers
+###### 4.0.0.12.0.2. ## Visibiltiy Modifiers
 - These include `public`, `private` and `protected`
 - in general when in doubt make it `private`
 - only provide `getters` and `setters` if you're sure that external classes need to directly manipulate
 - if you leave the visibility modifier, your class/attribute/method will be visible within the package which is declared.
 
-###### 3.0.0.12.0.3. ## The Abstract Class
+###### 4.0.0.12.0.3. ## The Abstract Class
 - The `abstract` class cant be instantiated
     - may lack important components
     - such as method bodies
     - inherits the methods and attributes, this means that it can implement the public methods and the attributes specified by the  **base** class.
 
-###### 3.0.0.12.0.4. ## Hinge Points
+###### 4.0.0.12.0.4. ## Hinge Points
 - Applying dependency inversion to a single relationship.
 - We take a class, seperately define it's interface as an abstract entity, seperate the code. We can let the client code interact with the abstract interface. They only interact with each other through the interface.
 ![https://upload.wikimedia.org/wikipedia/commons/8/8d/DIPLayersPattern.png](https://upload.wikimedia.org/wikipedia/commons/8/8d/DIPLayersPattern.png)
 
-###### 3.0.0.12.0.5. Packages
+###### 4.0.0.12.0.5. Packages
 We want to split things up into packages.
 - We group a bunch of `classes` and bundle it into a subsystem.
 - The boundary around a package is also an encapsulation boundary.
 
-###### 3.0.0.12.0.6. ## Nesting Packages
+###### 4.0.0.12.0.6. ## Nesting Packages
 - You can't put a package inside another package in Java
 - `java.util.jar` is not a package within `java.util`
 - If you want to use the package, you have explicitly import (e.g. `import java.util`)
 
-###### 3.0.0.12.0.7. Abtraction Layers
+###### 4.0.0.12.0.7. Abtraction Layers
 - An **abstraction layer** is the publicly accessible interface to a class, package or subsystem.
 - You can create an abstraction layer by restricting visiblity as much as possible.
 - One problem is to making too much public.
 
-# 4. FIT2099 Week 9 Lecture A
+# 5. FIT2099 Week 9 Lecture A
 
 Student data type
 ```
@@ -303,7 +336,7 @@ Address
 
 - Find specification of the class.
 
-#### 4.0.0.13. Client Supplier Relationship
+#### 5.0.0.13. Client Supplier Relationship
 - We can draw the UML
 
 Client -> Supplier
@@ -313,16 +346,16 @@ Client -> Supplier
    - `Watch1` is a client of Counter, and asks it to perform services such as `increment`, `reset()`
    - Inheritments making use of service to.
    
-#### 4.0.0.14. Software Spec: The Problem
+#### 5.0.0.14. Software Spec: The Problem
 - Hardware components
 - Well-edfined public interafcaes with a hidden implementation
 - Have regorous umabgiousous _specification_ of behaviour
 
-#### 4.0.0.15. Design by Contract
+#### 5.0.0.15. Design by Contract
 - _class_ desginer establishes a _software contract_ between him/herselfs and the user(s) of the class he/she designs
 - make this impersonal. Contract betweent he class that is the supplier and the clients of the class
 
-###### 4.0.0.15.0.8. Software Contract
+###### 5.0.0.15.0.8. Software Contract
 - Documentation of the class of the technical user
 - the possiblity of enforcing the contract by using exceptions and assertions
 
@@ -341,7 +374,7 @@ public class Documentation{
    e.g. `assert studentID to be interger and between 00000001 to 99999999`
    - What the class will guarantee to be if is used correctly
 
-#### 4.0.0.16. Specification of a Class
+#### 5.0.0.16. Specification of a Class
 - A specification
     - is ideally part of the implementation
         - In some languages such as _Eiffel_ that is built ibn others that i can done by hand (via the use of assertions and exceptions)
@@ -360,7 +393,7 @@ public class Documentation{
     - not have to look at implemenation details
 - Specs forms the public interface of the class
 
-#### 4.0.0.17. Specs
+#### 5.0.0.17. Specs
 - Preconditions ('requires')
     - things that need to be true for method to run
     

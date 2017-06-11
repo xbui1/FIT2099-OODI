@@ -43,12 +43,14 @@ FIT2099 Notes
         - [5.2.6. Nesting Packages](#526-nesting-packages)
         - [5.2.7. Abtraction Layers](#527-abtraction-layers)
 - [6. FIT2099 Week 9 Lecture A](#6-fit2099-week-9-lecture-a)
-            - [6.0.7.1. Client Supplier Relationship](#6071-client-supplier-relationship)
-            - [6.0.7.2. Software Spec: The Problem](#6072-software-spec-the-problem)
-            - [6.0.7.3. Design by Contract](#6073-design-by-contract)
-                    - [6.0.7.3.0.1. Software Contract](#607301-software-contract)
-            - [6.0.7.4. Specification of a Class](#6074-specification-of-a-class)
-            - [6.0.7.5. Specs](#6075-specs)
+    - [6.1. Client Supplier Relationship](#61-client-supplier-relationship)
+    - [6.2. Software Spec: The Problem](#62-software-spec-the-problem)
+    - [6.3. Design by Contract](#63-design-by-contract)
+    - [6.4. Software Contract](#64-software-contract)
+    - [6.5. Specification of a Class](#65-specification-of-a-class)
+    - [6.6. Specs](#66-specs)
+- [7. UML Diagram](#7-uml-diagram)
+- [8. Java Cheat Sheet](#8-java-cheat-sheet)
 
 <!-- /TOC -->
 # 2. Good Design in Software 
@@ -363,7 +365,7 @@ Address
 
 - Find specification of the class.
 
-#### 6.0.7.1. Client Supplier Relationship
+## 6.1. Client Supplier Relationship
 - We can draw the UML
 
 Client -> Supplier
@@ -373,16 +375,16 @@ Client -> Supplier
    - `Watch1` is a client of Counter, and asks it to perform services such as `increment`, `reset()`
    - Inheritments making use of service to.
    
-#### 6.0.7.2. Software Spec: The Problem
+## 6.2. Software Spec: The Problem
 - Hardware components
 - Well-edfined public interafcaes with a hidden implementation
 - Have regorous umabgiousous _specification_ of behaviour
 
-#### 6.0.7.3. Design by Contract
+## 6.3. Design by Contract
 - _class_ desginer establishes a _software contract_ between him/herselfs and the user(s) of the class he/she designs
 - make this impersonal. Contract betweent he class that is the supplier and the clients of the class
 
-###### 6.0.7.3.0.1. Software Contract
+## 6.4. Software Contract
 - Documentation of the class of the technical user
 - the possiblity of enforcing the contract by using exceptions and assertions
 
@@ -401,7 +403,7 @@ public class Documentation{
    e.g. `assert studentID to be interger and between 00000001 to 99999999`
    - What the class will guarantee to be if is used correctly
 
-#### 6.0.7.4. Specification of a Class
+## 6.5. Specification of a Class
 - A specification
     - is ideally part of the implementation
         - In some languages such as _Eiffel_ that is built ibn others that i can done by hand (via the use of assertions and exceptions)
@@ -420,8 +422,27 @@ public class Documentation{
     - not have to look at implemenation details
 - Specs forms the public interface of the class
 
-#### 6.0.7.5. Specs
+## 6.6. Specs
 - Preconditions ('requires')
     - things that need to be true for method to run
     
 
+# 7. UML Diagram
+![img](http://www.conceptdraw.com/How-To-Guide/picture/Design-elements-UML-class-diagrams.png)
+
+# 8. Java Cheat Sheet
+
+A Class
+```
+public class HelloWorld {
+    public static void main(String[] args){
+        System.out.print("Hello, World")
+    }
+}
+```
+
+Declaration and Assignments
+**Always declare variables then assign them**
+```Java
+int a; //declare variable 
+```

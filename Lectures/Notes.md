@@ -51,6 +51,19 @@ FIT2099 Notes
     - [6.6. Specs](#66-specs)
 - [7. UML Diagram](#7-uml-diagram)
 - [8. Java Cheat Sheet](#8-java-cheat-sheet)
+    - [Classes](#classes)
+    - [Editing, compiling and executing](#editing-compiling-and-executing)
+    - [Built-in data types](#built-in-data-types)
+    - [Declaration and Assignment Statements](#declaration-and-assignment-statements)
+    - [Integers](#integers)
+    - [Floating-point numbers](#floating-point-numbers)
+    - [Type Conversion and Library Calls](#type-conversion-and-library-calls)
+    - [If and else](#if-and-else)
+        - [Switch Statement](#switch-statement)
+    - [Loops](#loops)
+    - [Functions](#functions)
+    - [Constructors](#constructors)
+        - [Instance Methods](#instance-methods)
 
 <!-- /TOC -->
 # 2. Good Design in Software 
@@ -432,17 +445,50 @@ public class Documentation{
 
 # 8. Java Cheat Sheet
 
-A Class
-```
-public class HelloWorld {
-    public static void main(String[] args){
-        System.out.print("Hello, World")
-    }
-}
-```
+## Classes
+![img](http://introcs.cs.princeton.edu/java/11cheatsheet/images/hello.png)
 
-Declaration and Assignments
-**Always declare variables then assign them**
-```Java
-int a; //declare variable 
-```
+## Editing, compiling and executing
+![img2](http://introcs.cs.princeton.edu/java/11cheatsheet/images/developing.png)
+
+## Built-in data types
+![img3](http://introcs.cs.princeton.edu/java/11cheatsheet/images/built-in.png)
+
+## Declaration and Assignment Statements
+![img4](http://introcs.cs.princeton.edu/java/11cheatsheet/images/assignment.png)
+
+## Integers
+![img5](http://introcs.cs.princeton.edu/java/11cheatsheet/images/int.png)
+
+![img6](http://introcs.cs.princeton.edu/java/11cheatsheet/images/int-expressions.png)
+
+## Floating-point numbers
+![img7](http://introcs.cs.princeton.edu/java/11cheatsheet/images/double.png)
+
+![img8](http://introcs.cs.princeton.edu/java/11cheatsheet/images/double-expressions.png)
+
+## Type Conversion and Library Calls
+![img10](http://introcs.cs.princeton.edu/java/11cheatsheet/images/library-calls.png)
+
+![img9](http://introcs.cs.princeton.edu/java/11cheatsheet/images/casts.png)
+
+## If and else
+![if-else](http://introcs.cs.princeton.edu/java/11cheatsheet/images/if-else.png)
+
+### Switch Statement
+![](http://introcs.cs.princeton.edu/java/11cheatsheet/images/switch.png)
+## Loops
+![while-loop](http://introcs.cs.princeton.edu/java/11cheatsheet/images/while.png)
+
+![for](http://introcs.cs.princeton.edu/java/11cheatsheet/images/for.png)
+
+
+## Functions
+![func](http://introcs.cs.princeton.edu/java/11cheatsheet/images/function-examples.png)
+
+## Constructors
+![cons](http://introcs.cs.princeton.edu/java/11cheatsheet/images/constructor.png)
+
+### Instance Methods
+![meth](http://introcs.cs.princeton.edu/java/11cheatsheet/images/instance-method.png)
+

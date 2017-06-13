@@ -100,10 +100,13 @@ _Will have some depenencies, having fewer dependencies makes it easier to debug,
 ## 2.2. Connascence
 - Based on earlier ideas of _cohesion_ and _coupling_
 
-```
-two components are connascent if a change in one would require the other to be modified in order to maintain the overall correctness of the system.
-            - Connascence (Wikipedia Definition)
-```
+> two components are connascent if a change in one would require the other to be modified in order to maintain the overall correctness of the system.
+
+> the reason for maximising connascence within encapsulation boundaries is that you are trying to increase the locality of connascence, if connascence is more local then it is easier to manage those dependencies, and hence it is easier to maintain it
+
+> the best connascence is having no connascence at all
+because "two things" that change together are actually just one thin
+
 
 ### 2.2.1. Importance of Connascence
 More connascence means:
